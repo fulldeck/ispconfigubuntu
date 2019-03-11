@@ -45,7 +45,7 @@ RUN dpkg-reconfigure dash
 #RUN apt-get remove apparmor apparmor-utils
 
 # --- 5 Synchronize the System Clock
-ENV TZ=America/Sao_Paulo
+ENV TZ=America/Edmonton
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get -y install ntp ntpdate
 
